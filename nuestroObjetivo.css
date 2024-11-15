@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*controls de width, height, padding, margin*/
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: linear-gradient(
+    rgba(9, 4, 0, 0.9), /*Gradient overlay*/
+    rgba(9, 4, 0, 0.9)),
+    url(walpapercal.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover; /*It makes the image cover the container without get distorted*/
+  min-height: 70vh;
+  display: flex; /*It adapts to the space*/
+  align-items: center;
+}
+
+.menu {
+  position: absolute; /*Position the element to the very top*/
+  top: 0;
+  left: 0;
+  right: 0; /*position to the top of the page, from left to right*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #A18C7D;
+}
+
+#logo {
+  width: 70px;
+  height: 70px;
+}
+
+.menu .navbar ul li {
+  position: relative; /*remains in the normal flow of the page*/
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  color: #fffdfc;
+  display: block; /*take up the full width available*/
+  font-weight: 600;
+  text-align: center;
+}
+
+.menu .navbar ul li a:hover {
+  color: #78685C;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 75px;
+  line-height: 80px;
+  color: #f9fafc;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.indexTitulo {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 95%;
+}
+
+.indexContenido {
+  display: flex;
+  justify-content: center;
+  font-size: 95%;
+}
+
+a {
+  color: white;
+}
+
+.indexContenido ul li a:hover {
+  color: #6a6a6a;
+}
+
+.segundop, .tercerp, .primerp {
+  text-align: justify;
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 100%;
+}
+
+footer {
+  background-color: #a18c7d;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 30px;
+  box-sizing: border-box;
+}
+
+.redes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /*allows items to move onto multiple lines*/
+  gap: 150px; /* space between elements */
+}
+
+.red {
+  flex: 1; /*expand itself to take up as much space as possible*/
+  text-align: center;
+}
+
+#img {
+  margin: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+/* Media query for 730px screens */
+@media (max-width: 730px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .redes {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* less space between elements */
+  }
+
+  .red {
+    width: 100%;
+    text-align: center;
+  }
+
+  #img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+
+/* hamburguer menu */
+.menu-hamburguesa {
+    display: none; /*hide the element*/
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 730px) {
+    .contenido-ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #A18C7D;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .contenido-ul.active {
+        display: flex;
+    }
+
+    .menu-hamburguesa {
+        display: flex;
+        margin-right: 10px;
+    }
+}
+
+#btnArriba {
+  position: fixed; /*stays in the same position if we scorll*/
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+#btnArriba:hover {
+  background-color: #333;
+}
+
+* {
+  scroll-behavior:smooth;
+}
